@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>OUI</title>
+    <link rel="stylesheet" href="./dist/css/OUI.css">
+    <link rel="stylesheet" href="./demo.css">
+  </head>
+  <body>
+  	<div id="app" class="aa">
+  		<button class="oui-button" id="toast">默认toast</button>
+  		<button class="oui-button" id="successToast">成功toast</button>
+  	</div>
+    <script src="./dist/js/OUI.min.js"></script>
+    <script>
+    	var toast = document.getElementById("toast");
+    	var successToast = document.getElementById("successToast");
+
+		toast.addEventListener('click', function(){
+			OUI.dialog.toast();
+		}, false);
+		
+		successToast.addEventListener('click', function(){
+			OUI.dialog.toast({
+				content:'tt',
+				icon:'success'
+			});
+		}, false);
+
+    </script>
+  </body>
+</html>
